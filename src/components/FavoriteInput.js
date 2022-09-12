@@ -7,7 +7,7 @@ class FavoriteInput extends Component {
     return (
       <form className="favorite-form">
         <label htmlFor="favorite">
-          { `Pokémon favoritado?` }
+          Pokémon favoritado?
           <input
             type="checkbox"
             id="favorite"

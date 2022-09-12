@@ -3,7 +3,7 @@ import { screen } from '@testing-library/react';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
-describe('testes do componente App', () => {
+describe('Testes do componente', () => {
   test('É exibido na tela um link com o texto Home', () => {
     renderWithRouter(<App />);
     const linkHome = screen.getByRole('link', { name: 'Home' });

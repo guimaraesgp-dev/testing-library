@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
-describe('Exercicio 5', () => {
+describe('Testes do componente', () => {
   test('Teste se a página contém um heading h2 com o texto Encountered pokémons', () => {
     const { getByRole } = renderWithRouter(<App />);
     const headingh2 = getByRole('heading', { name: /Encountered pokémons/i });

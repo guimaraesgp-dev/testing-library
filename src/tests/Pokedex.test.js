@@ -4,13 +4,13 @@ import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
 describe('Exercicio 5', () => {
-  test('testa se a página contem o texto "Encountered pokémons"', () => {
+  test('Teste se a página contém um heading h2 com o texto Encountered pokémons', () => {
     const { getByRole } = renderWithRouter(<App />);
-    const h2 = getByRole('heading', { name: /Encountered pokémons/i });
-    expect(h2).toBeInTheDocument();
+    const headingh2 = getByRole('heading', { name: /Encountered pokémons/i });
+    expect(headingh2).toBeInTheDocument();
   });
 
-  test('Verifica a lista def pokemons', () => {
+  test('Teste se é exibido o próximo pokémon da lista...', () => {
     const { getByRole, getByText } = renderWithRouter(<App />);
     const pikachu = getByText(/Pikachu/i);
     expect(pikachu).toBeInTheDocument();
@@ -21,7 +21,7 @@ describe('Exercicio 5', () => {
     expect(charmander).toBeInTheDocument();
   });
 
-  test('testando os botões de filtro', () => {
+  test('Teste se a Pokédex tem os botões de filtro', () => {
     const { getAllByTestId, getByRole, getByText } = renderWithRouter(<App />);
     const testIdButtons = getAllByTestId('pokemon-type-button');
     const psychic = getByRole('button', { name: /Psychic/i });
@@ -35,7 +35,7 @@ describe('Exercicio 5', () => {
     expect(alakazam).toBeInTheDocument();
   });
 
-  test('verifica se se existe um botão reset para os filtros', () => {
+  test('Teste se a Pokédex contém um botão para resetar o filtro', () => {
     const { getByRole, getByText } = renderWithRouter(<App />);
     const allButton = getByRole('button', { name: /all/i });
     expect(allButton).toBeInTheDocument();
